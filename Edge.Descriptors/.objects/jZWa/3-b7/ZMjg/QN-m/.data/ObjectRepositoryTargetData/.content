@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="h7CyL8TsBUi_s5S9jAy14A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="finance.yahoo.com/quote/AC.TO" CVScreenId="78aacb37-2e6b-4215-b2c4-066888d51cc3" DesignTimeRectangle="2301, 507, 232, 29" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LI' innertext='\s*Earnings Date.*' matching:innertext='regex' /&gt;&lt;webctrl tag='SPAN' innertext='^(?!\s*Earnings Date).*' matching:innertext='regex' /&gt;" Guid="4a9bbeb6-9f8e-419c-b2e8-1a1bb3d5209d" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/quote*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5fd7077708efff55c1898b614cc01d4a.png" xmlns="">09_NDPTF4aEOeSqow6RTnNg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

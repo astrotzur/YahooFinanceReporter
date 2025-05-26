@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Active Table Button - dynamic",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "viIB94hAZUa7WsTObXqcIA",
+  "Reference": "dN7dNV7730O2NrmCMOaoeQ/viIB94hAZUa7WsTObXqcIA",
+  "ParentRef": "dN7dNV7730O2NrmCMOaoeQ/zZE8mU652kqkdw2a1FIZZw",
+  "Created": "2025-05-25T18:19:16.1297066Z",
+  "Updated": "2025-05-25T18:19:16.1297066Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

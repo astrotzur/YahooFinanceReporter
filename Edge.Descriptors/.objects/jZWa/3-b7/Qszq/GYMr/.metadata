@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Rows per page button",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "GYMrYRgiCU-_rysB8Rr0Qg",
+  "Reference": "dN7dNV7730O2NrmCMOaoeQ/GYMrYRgiCU-_rysB8Rr0Qg",
+  "ParentRef": "dN7dNV7730O2NrmCMOaoeQ/QszqNpPrG0yAApVhvTkwtw",
+  "Created": "2025-05-25T18:19:15.9988856Z",
+  "Updated": "2025-05-25T18:19:15.9988856Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

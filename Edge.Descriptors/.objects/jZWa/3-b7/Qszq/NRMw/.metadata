@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Multi-Page Table",
+  "Type": "Element",
+  "TaxonomyType": "Table",
+  "Id": "NRMwkF3wk0OUJZDLiSpwUw",
+  "Reference": "dN7dNV7730O2NrmCMOaoeQ/NRMwkF3wk0OUJZDLiSpwUw",
+  "ParentRef": "dN7dNV7730O2NrmCMOaoeQ/QszqNpPrG0yAApVhvTkwtw",
+  "Created": "2025-05-25T18:19:15.9772949Z",
+  "Updated": "2025-05-25T18:19:15.9772949Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

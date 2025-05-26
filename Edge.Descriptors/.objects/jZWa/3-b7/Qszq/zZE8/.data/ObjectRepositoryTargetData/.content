@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="et9leIY10US9o1VHyuDtFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="finance.yahoo.com/markets/stocks/gainers" CVScreenId="4a60b7a6-5fce-4c53-96df-4e2d514b280a" DesignTimeRectangle="1019, 482, 1524, 48" DesignTimeScaleFactor="1.5" ElementType="List" FullSelectorArgument="&lt;webctrl aria-label='stocks menubar' aria-role='menubar' /&gt;" Guid="6986558a-3e86-49ef-9783-6bbe18b0028b" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="621473c366f23342143b7c324be43158.png" xmlns="">07skdK7TVw0WR0b4jQS07Rw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5LwjU82UBUGxbaas_JecEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="b68f5171-ae42-4d83-a4cc-b7b7ded4c740" DesignTimeRectangle="2026, 1537, 97, 171" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='DIV' innertext='^[\d\s]+$' matching:innertext='regex' id='*menu*' /&gt;" Guid="64534dac-5442-40cf-9fc9-3021ab381a8d" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d8bf39145887d9e5a5e80ecd8ed6b996.png" xmlns="">095rJt8D4lEKI2vL8mJx9RA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Rows per page menu",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "efCLUKrPDUS0o9VvelYmZA",
+  "Reference": "dN7dNV7730O2NrmCMOaoeQ/efCLUKrPDUS0o9VvelYmZA",
+  "ParentRef": "dN7dNV7730O2NrmCMOaoeQ/GYMrYRgiCU-_rysB8Rr0Qg",
+  "Created": "2025-05-25T18:19:16.0071016Z",
+  "Updated": "2025-05-25T18:19:16.0071016Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

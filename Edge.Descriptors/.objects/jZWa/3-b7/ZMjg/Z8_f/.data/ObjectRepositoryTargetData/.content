@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mGfOL1-bg0eaLz6scFWLYQ" Reference="dN7dNV7730O2NrmCMOaoeQ/Z8_fwVrhcEanz_qNhrtlcQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="finance.yahoo.com/quote/NVDA" CVScreenId="12dcf53c-041d-45fe-91ca-5232b12d9aad" DesignTimeRectangle="1334, 401, 37, 30" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='ARTICLE' /&gt;&lt;webctrl tag='SECTION' /&gt;&lt;webctrl tag='SPAN' innertext='^[A-Z]{3}$' matching:innertext='regex' /&gt;" Guid="00b9eb05-3bb7-4d93-b83b-6bfa05ad9a37" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/quote*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="27dd5fd120b32f9d95c2a6b0f96c5c02.png" xmlns="">0NuQnussew0K2Tze--g25uQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

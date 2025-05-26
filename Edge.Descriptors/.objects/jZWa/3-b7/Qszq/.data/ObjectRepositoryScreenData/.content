@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="8ETrNpp3oUmpO2VRP6h0ww" Reference="4JygaK7e8U-yDkZNBLXO9g/QszqNpPrG0yAApVhvTkwtw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 3862, 2122" BrowserType="Edge" ContentHash="shplU0pW-kyX6CzeWTyFlw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEiSURBVDhPY0hgvPSfEjyEDGi3v/v/46vf/z+8+PU/heMyXJxoA85t+vgfBC5s+YgijmLAo0vf///5/e9/ttDV/2ncl////Pb3/+PL3/+Xqdz4//fvP7ABXS73cBuwsuwZWNHcpMf/p4Y9BLNXVz7/v3vSazAbZBiyehBGMaBQ5tr/f//+/b+47dP/02s+gDUVK1z//+bhz/9f3v35Pzv+EYpmEMYIg+v7P////esf2Pm3jn75X6V1E+yyAqlrKOpgGMOAucmPwTaDwOKcp/8fXvgGZh+c8xZFHQxjGJDJf+X/759////98+9/rtjV/2trnv9/de/n/wm+91HUwTCGAcXy18HhcGnHJxRxXBjDAFCogwC2AMOGMQwgFQ+0AZf+AwBp6nhKepyMaAAAAABJRU5ErkJggg==" Reference="4JygaK7e8U-yDkZNBLXO9g/QszqNpPrG0yAApVhvTkwtw" Selector="&lt;html app='msedge.exe' title='*yahoo*' /&gt;" Title="Yahoo הוא חלק ממשפחת המותגים של Yahoo." Url="https://finance.yahoo.com/markets/stocks" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="0d32c400c76b5960d0d7bf7287d62296.jpg" xmlns="">0YnsE14xrbkiS_zk9-qS6bQ</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

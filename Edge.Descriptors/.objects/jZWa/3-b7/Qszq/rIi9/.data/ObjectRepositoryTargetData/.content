@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XUYQT6OHJ0Sqb5CnScYhyA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="finance.yahoo.com/markets/stocks/most-active" CVScreenId="bb8fe643-7431-4c58-9607-610cdacc932c" CvTextArea="1029, 636, 63, 21" CvTextArgument="Symbol" CvType="Text" DesignTimeRectangle="1032, 622, 60, 48" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='colCont yf-1570k0a' aaname=' Symbol' check:innerText='Symbol' /&gt;" Guid="a6e5d015-b4f8-4233-8e01-1eaff2dfde8a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Most Active Stocks: US stocks with the highest trading volume today - Yahoo Finance' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bb8fe643-7431-4c58-9607-610cdacc932c" CvTextArea="1016, 408, 105, 31" CvTextArgument="Stocks" CvType="Text" DesignTimeRectangle="1019, 401, 99, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='header yf-13lpgjv' aaname='Stocks' check:innerText='Stocks' /&gt;" Guid="bcc00dae-6f38-4bd8-ba42-81b54d9d1636" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e7476294449e0b1fb3d3db5018818687.png" xmlns="">0HvCC2bhfWU2aQ-4I46YDAw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

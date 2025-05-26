@@ -1,0 +1,15 @@
+﻿{
+  "Name": "QuotePage",
+  "Type": "Screen",
+  "Id": "ZMjgzkzsQEWN0a57_n3Mrw",
+  "Reference": "dN7dNV7730O2NrmCMOaoeQ/ZMjgzkzsQEWN0a57_n3Mrw",
+  "ParentRef": "dN7dNV7730O2NrmCMOaoeQ/3-b7FTE0kU-txQNcsPhWyw",
+  "Created": "2025-05-25T18:19:15.9534731Z",
+  "Updated": "2025-05-25T18:19:15.9534731Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

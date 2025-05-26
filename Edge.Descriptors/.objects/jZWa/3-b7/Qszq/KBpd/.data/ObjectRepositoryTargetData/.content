@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KqS7047dmk22I_UWi7V2Hw" Reference="4JygaK7e8U-yDkZNBLXO9g/KBpdCGwlTkywqMKE2xrAuA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="consent.yahoo.com/v2/collectConsent" CVScreenId="de3ecffb-f7bd-4efb-9c68-77ff0c770a86" DesignTimeRectangle="1921, 1510, 240, 53" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl name='reject' tag='BUTTON' /&gt;" Guid="215d5dd1-875a-4bba-82a7-0eb36b1da6bc" ScopeSelectorArgument="&lt;html app='msedge.exe' url='*consent*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a59d52c1fa23b863b54460caf276888e.png" xmlns="">0LY5iQZnUn0eFdJysy6Y3BQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
