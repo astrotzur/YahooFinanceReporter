@@ -1,0 +1,501 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dispatcher" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_config" Type="InArgument(scg:Dictionary(x:String, x:Object))">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Dispatcher_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="1828,4863.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="[in_config(&quot;LogOutputPath&quot;).ToString()]" Name="in_output_folder_path_str" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="1630,4840.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="[in_config(&quot;log_filename&quot;).ToString()]" Name="log_filename" />
+        <Variable x:TypeArguments="x:String" Default="[in_config(&quot;OrchestratorQueueFolder&quot;).ToString()]" Name="queue_folder_str" />
+        <Variable x:TypeArguments="x:String" Default="[in_config(&quot;OrchestratorQueueName&quot;).ToString()]" Name="queue_name_str" />
+        <Variable x:TypeArguments="x:String" Default="[in_config(&quot;logF_BusinessProcessName&quot;).ToString()]" Name="process_name_str" />
+        <Variable x:TypeArguments="sd:DataTable" Name="stocks_dt" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1596,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Logger.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_message">--- Dispatcher execution started ---</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="YahooFinance" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1596,4006" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsIncognito="True" OpenMode="Always" ScopeGuid="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1562,3754.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheckState sap2010:Annotation.AnnotationText="Handle cookie concent" DisplayName="Check App State 'RejectCoockies'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1528,88" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence sap2010:Annotation.AnnotationText="log message &quot;reject button detected&quot;" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,493.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Logger.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                        <InArgument x:TypeArguments="x:String" x:Key="in_message">Reject cookies button detected - clicking on it</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'RejectCoockies'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="consent.yahoo.com/v2/collectConsent" CVScreenId="de3ecffb-f7bd-4efb-9c68-77ff0c770a86" ContentHash="KqS7047dmk22I_UWi7V2Hw" DesignTimeRectangle="1921, 1510, 240, 53" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl name='reject' tag='BUTTON' /&gt;" Guid="215d5dd1-875a-4bba-82a7-0eb36b1da6bc" InformativeScreenshot="a59d52c1fa23b863b54460caf276888e.png" Reference="4JygaK7e8U-yDkZNBLXO9g/KBpdCGwlTkywqMKE2xrAuA" ScopeSelectorArgument="&lt;html app='msedge.exe' url='*consent*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="Label 'Label 'Symbol''" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Target>
+                            <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/gainers" CVScreenId="4a60b7a6-5fce-4c53-96df-4e2d514b280a" ContentHash="et9leIY10US9o1VHyuDtFg" DesignTimeRectangle="1019, 482, 1524, 48" DesignTimeScaleFactor="1.5" ElementType="List" FullSelectorArgument="&lt;webctrl aria-label='stocks menubar' aria-role='menubar' /&gt;" Guid="6986558a-3e86-49ef-9783-6bbe18b0028b" ImageBase64="" InformativeScreenshot="621473c366f23342143b7c324be43158.png" Reference="4JygaK7e8U-yDkZNBLXO9g/zZE8mU652kqkdw2a1FIZZw" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:VerifyExecutionOptions.Target>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,233.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="416,170.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Logger.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                        <InArgument x:TypeArguments="x:String" x:Key="in_message">Reject cookies button not detected</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="consent.yahoo.com/v2/collectConsent" CVScreenId="de3ecffb-f7bd-4efb-9c68-77ff0c770a86" ContentHash="KqS7047dmk22I_UWi7V2Hw" DesignTimeRectangle="1921, 1510, 240, 53" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;webctrl name='reject' tag='BUTTON' /&gt;" Guid="215d5dd1-875a-4bba-82a7-0eb36b1da6bc" InformativeScreenshot="a59d52c1fa23b863b54460caf276888e.png" Reference="4JygaK7e8U-yDkZNBLXO9g/KBpdCGwlTkywqMKE2xrAuA" ScopeSelectorArgument="&lt;html app='msedge.exe' url='*consent*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each table_str" sap:VirtualizedContainerService.HintSize="1528,2961.3333333333335" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_config(&quot;Tables&quot;).ToString().Replace(&quot;&quot;&quot;&quot;, &quot;&quot;).Split(&quot;,&quot;c).Select(Function(s) s.Trim()).ToList()]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="x:String">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="table_str" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1526,2829.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1492,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Logger.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                          <InArgument x:TypeArguments="x:String" x:Key="in_message">[$"clicking on '{table_str}'"]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Table Button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1492,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/gainers" CVScreenId="7639491a-965b-4925-b6c9-64385859d85d" ContentHash="HkqE7ldaJkWJakzsNUd0nw" DesignTimeRectangle="1037, 490, 116, 31" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='menubar' aria-label='stocks menubar' /&gt;&lt;webctrl innertext='*{0}*' tag='SPAN' /&gt;&quot;, table_str)]" Guid="afe25d99-d654-443f-97a1-be895c008fbe" ImageBase64="" InformativeScreenshot="7c187f5525d8f6c5b9060787c707c050.png" Reference="4JygaK7e8U-yDkZNBLXO9g/0_Awgo5b-ku-jlDfBDSBYw" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="Label 'Active Table Button - dynamic'" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Target>
+                              <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/gainers" CVScreenId="44fe3294-a483-46a2-8e7f-a66652cce4ed" ContentHash="y7mfqJxbGkKF8eGouizQxQ" DesignTimeRectangle="1340, 482, 152, 48" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='menubar' aria-label='stocks menubar' /&gt;&lt;webctrl class='*selected*' innertext='*{0}*' /&gt;&quot;, table_str)]" Guid="4f1e9be9-e5a1-46e5-b769-06a5f534be48" ImageBase64="" InformativeScreenshot="c0ebf317198d54174b09c395fc31793a.png" Reference="4JygaK7e8U-yDkZNBLXO9g/viIB94hAZUa7WsTObXqcIA" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                            </uix:VerifyExecutionOptions.Target>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NCheckState sap2010:Annotation.AnnotationText="Getting all the rows from all the tables" DisplayName="Check App State 'Rows per page button'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1492,2362.6666666666665" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,2088" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="rows_per_page_options_str" />
+                              <Variable x:TypeArguments="x:String" Name="max_rows_per_page_regex_str" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="954,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Logger.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_message">Setting max rows per page</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Rows per page button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="4c614a60-df13-4155-ac2f-d9261a69063c" ContentHash="SLtE0FdUGk64M4b-r0Z1Jw" DesignTimeRectangle="2006, 1881, 137, 46" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='\s*Rows per page\s*' matching:aaname='regex' tag='DIV' /&gt;&lt;webctrl tag='BUTTON' /&gt;" Guid="c07694df-7ef4-40cc-8642-d35052be8c64" InformativeScreenshot="26bfa8c3db89f0fe5ae02835f9f601d2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/GYMrYRgiCU-_rysB8Rr0Qg" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="Element 'Rows per page menu'" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Target>
+                                    <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="b68f5171-ae42-4d83-a4cc-b7b7ded4c740" ContentHash="5LwjU82UBUGxbaas_JecEw" DesignTimeRectangle="2026, 1537, 97, 171" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='DIV' innertext='^[\d\s]+$' matching:innertext='regex' id='*menu*' /&gt;" Guid="64534dac-5442-40cf-9fc9-3021ab381a8d" InformativeScreenshot="d8bf39145887d9e5a5e80ecd8ed6b996.png" Reference="4JygaK7e8U-yDkZNBLXO9g/efCLUKrPDUS0o9VvelYmZA" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                  </uix:VerifyExecutionOptions.Target>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innertext" DisplayName="Get Attribute 'Rows per page menu'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,243.33333333333334" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[rows_per_page_options_str]" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                              <uix:NGetAttributeGeneric.Target>
+                                <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="b68f5171-ae42-4d83-a4cc-b7b7ded4c740" ContentHash="5LwjU82UBUGxbaas_JecEw" DesignTimeRectangle="2026, 1537, 97, 171" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='DIV' innertext='^[\d\s]+$' matching:innertext='regex' id='*menu*' /&gt;" Guid="64534dac-5442-40cf-9fc9-3021ab381a8d" InformativeScreenshot="d8bf39145887d9e5a5e80ecd8ed6b996.png" Reference="4JygaK7e8U-yDkZNBLXO9g/efCLUKrPDUS0o9VvelYmZA" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NGetAttributeGeneric.Target>
+                            </uix:NGetAttributeGeneric>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="954,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Logger.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_message">[$"The detected rows per page options are '{rows_per_page_options_str}'"]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <Assign sap:VirtualizedContainerService.HintSize="954,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[max_rows_per_page_regex_str]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["\s*" + (From s In rows_per_page_options_str.Split(" "c) Where s &lt;&gt; "" Select CInt(s)).Max().ToString() + "\s*"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="954,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Logger.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_message">[$"Clicking on the highest value: {max_rows_per_page_regex_str.Replace("\s*", "")}"]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Max 'Rows per page option'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="91bf3c15-f8b8-40c7-8b73-c5c98a226b9e" ContentHash="0d3mzuDoQ0yAan8m5IIq5Q" DesignTimeRectangle="2027, 1688, 95, 56" DesignTimeScaleFactor="1.5" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='DIV' innertext='^[\d\s]+$' matching:innertext='regex' id='*menu*' /&gt;&lt;webctrl tag='DIV' innertext='{0}' matching:innertext='regex' /&gt;&quot;, max_rows_per_page_regex_str)]" Guid="fd81b0e7-3b2b-484c-ab58-ed16d5096f96" ImageBase64="" InformativeScreenshot="2c794d777ac5f3c646b715cc5d871fa2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/2hYO9AYac0GKamFKvrgvLQ" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NCheckState DisplayName="Check App State 'Rows per page button'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,712" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,425.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="rows_per_page_options_str" />
+                                    <Variable x:TypeArguments="x:String" Name="max_rows_per_page_regex_str" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_message">A multi-page table detected</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <uix:NExtractData ContinueOnError="False" DataTable="[stocks_dt]" DisplayName="Extract Table Data 'Multi-Page Table'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol' ReferenceIdx='0' Name='Symbol'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol Url' ReferenceIdx='1' Name='Symbol Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Name' ReferenceIdx='2' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='Column-2' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2 Url' ReferenceIdx='4' Name='Column-2 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price' ReferenceIdx='5' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change' ReferenceIdx='6' Name='Change'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change %' ReferenceIdx='7' Name='Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume' ReferenceIdx='8' Name='Volume'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Avg Vol (3M)' ReferenceIdx='9' Name='Avg Vol (3M)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Market Cap' ReferenceIdx='10' Name='Market Cap'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='P/E Ratio&amp;#xA;(TTM)' ReferenceIdx='11' Name='P/E Ratio (TTM)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk&amp;#xA;Change %' ReferenceIdx='12' Name='52 Wk Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk Range' ReferenceIdx='13' Name='52 Wk Range' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Symbol' attr='fulltext' name2='Symbol Url' attr2='href' /&gt;&lt;column name='Name' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' name2='Column-2 Url' attr2='href' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='Change' attr='fulltext' /&gt;&lt;column name='Change %' attr='fulltext' /&gt;&lt;column name='Volume' attr='fulltext' /&gt;&lt;column name='Avg Vol (3M)' attr='fulltext' /&gt;&lt;column name='Market Cap' attr='fulltext' /&gt;&lt;column name='P/E Ratio&amp;#xA;(TTM)' attr='fulltext' /&gt;&lt;column name='52 Wk&amp;#xA;Change %' attr='fulltext' /&gt;&lt;column name='52 Wk Range' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185.33333333333334" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                                    <uix:NExtractData.NextLink>
+                                      <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="d46b62f1-e843-437b-8db0-14e3831f07a2" CvElementArea="2441, 1491, 26, 29" CvType="ArrowButton" DesignTimeRectangle="2431, 2210, 47, 47" DesignTimeScaleFactor="1.5" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='BUTTON' aria-label='Goto next page' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aria-label='Goto next page' type='' class='icon-btn fin-size-medium rounded yf-1cfb8vd' aaname=' ' /&gt;" Guid="40eca40b-e3e1-4e77-accd-238cb455d4cd" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NExtractData.NextLink>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/markets/stocks/trending/" ContentHash="j07JhTRol0WjARrAXmcEag" DesignTimeRectangle="1020, 621, 1638, 1552" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="6d2c9088-3b8d-4b14-a03e-aa680cdab4ca" InformativeScreenshot="e556f20a0a4e8cd10186196e76bf2055.png" Reference="4JygaK7e8U-yDkZNBLXO9g/NRMwkF3wk0OUJZDLiSpwUw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Trending Stocks: US stocks with the highest interest today - Yahoo Finance' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,425.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_message">A single-page table detected</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <uix:NExtractData ContinueOnError="False" DataTable="[stocks_dt]" DisplayName="Extract Table Data 'Single-Page Table'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol' ReferenceIdx='0' Name='Symbol'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol Url' ReferenceIdx='1' Name='Symbol Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Name' ReferenceIdx='2' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='Column-2' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2 Url' ReferenceIdx='4' Name='Column-2 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price' ReferenceIdx='5' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change' ReferenceIdx='6' Name='Change'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change %' ReferenceIdx='7' Name='Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume' ReferenceIdx='8' Name='Volume'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Avg Vol (3M)' ReferenceIdx='9' Name='Avg Vol (3M)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Market Cap' ReferenceIdx='10' Name='Market Cap'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='P/E Ratio&amp;#xA;(TTM)' ReferenceIdx='11' Name='P/E Ratio (TTM)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk&amp;#xA;Change %' ReferenceIdx='12' Name='52 Wk Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk Range' ReferenceIdx='13' Name='52 Wk Range' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Symbol' attr='fulltext' name2='Symbol Url' attr2='href' /&gt;&lt;column name='Name' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' name2='Column-2 Url' attr2='href' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='Change' attr='fulltext' /&gt;&lt;column name='Change %' attr='fulltext' /&gt;&lt;column name='Volume' attr='fulltext' /&gt;&lt;column name='Avg Vol (3M)' attr='fulltext' /&gt;&lt;column name='Market Cap' attr='fulltext' /&gt;&lt;column name='P/E Ratio&amp;#xA;(TTM)' attr='fulltext' /&gt;&lt;column name='52 Wk&amp;#xA;Change %' attr='fulltext' /&gt;&lt;column name='52 Wk Range' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185.33333333333334" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/markets/stocks/most-active/" ContentHash="tbLz453LDEaf028PJbJHuA" DesignTimeRectangle="1020, 621, 1616, 1552" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="dab9fee1-c027-4475-949c-f9d9e51c1f42" InformativeScreenshot="4aed845e6ed0205d4f4e02c1c338bec2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/t53w32oeb0SZ-SJBcgZg2w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Most Active Stocks: US stocks with the highest trading volume today - Yahoo Finance' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="4c614a60-df13-4155-ac2f-d9261a69063c" ContentHash="SLtE0FdUGk64M4b-r0Z1Jw" DesignTimeRectangle="2006, 1881, 137, 46" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='\s*Rows per page\s*' matching:aaname='regex' tag='DIV' /&gt;&lt;webctrl tag='BUTTON' /&gt;" Guid="c07694df-7ef4-40cc-8642-d35052be8c64" InformativeScreenshot="26bfa8c3db89f0fe5ae02835f9f601d2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/GYMrYRgiCU-_rysB8Rr0Qg" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NCheckState.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NCheckState>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,425.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logger.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_message">A single-page table detected</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <uix:NExtractData ContinueOnError="False" DataTable="[stocks_dt]" DisplayName="Extract Table Data 'Single-Page Table'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol' ReferenceIdx='0' Name='Symbol'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol Url' ReferenceIdx='1' Name='Symbol Url'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Name' ReferenceIdx='2' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='Column-2' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2 Url' ReferenceIdx='4' Name='Column-2 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Price' ReferenceIdx='5' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change' ReferenceIdx='6' Name='Change'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change %' ReferenceIdx='7' Name='Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume' ReferenceIdx='8' Name='Volume'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Avg Vol (3M)' ReferenceIdx='9' Name='Avg Vol (3M)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Market Cap' ReferenceIdx='10' Name='Market Cap'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='P/E Ratio&amp;#xA;(TTM)' ReferenceIdx='11' Name='P/E Ratio (TTM)'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk&amp;#xA;Change %' ReferenceIdx='12' Name='52 Wk Change %'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Wk Range' ReferenceIdx='13' Name='52 Wk Range' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Symbol' attr='fulltext' name2='Symbol Url' attr2='href' /&gt;&lt;column name='Name' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' name2='Column-2 Url' attr2='href' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='Change' attr='fulltext' /&gt;&lt;column name='Change %' attr='fulltext' /&gt;&lt;column name='Volume' attr='fulltext' /&gt;&lt;column name='Avg Vol (3M)' attr='fulltext' /&gt;&lt;column name='Market Cap' attr='fulltext' /&gt;&lt;column name='P/E Ratio&amp;#xA;(TTM)' attr='fulltext' /&gt;&lt;column name='52 Wk&amp;#xA;Change %' attr='fulltext' /&gt;&lt;column name='52 Wk Range' attr='fulltext' /&gt;&lt;/extract-table&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185.33333333333334" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="bc681b8b-0fcc-4f53-8308-f88d3fd79018" Version="V4">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable BrowserURL="https://finance.yahoo.com/markets/stocks/most-active/" ContentHash="tbLz453LDEaf028PJbJHuA" DesignTimeRectangle="1020, 621, 1616, 1552" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="dab9fee1-c027-4475-949c-f9d9e51c1f42" InformativeScreenshot="4aed845e6ed0205d4f4e02c1c338bec2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/t53w32oeb0SZ-SJBcgZg2w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Most Active Stocks: US stocks with the highest trading volume today - Yahoo Finance' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="finance.yahoo.com/markets/stocks/52-week-gainers" CVScreenId="4c614a60-df13-4155-ac2f-d9261a69063c" ContentHash="SLtE0FdUGk64M4b-r0Z1Jw" DesignTimeRectangle="2006, 1881, 137, 46" DesignTimeScaleFactor="1.5" FullSelectorArgument="&lt;webctrl aaname='\s*Rows per page\s*' matching:aaname='regex' tag='DIV' /&gt;&lt;webctrl tag='BUTTON' /&gt;" Guid="c07694df-7ef4-40cc-8642-d35052be8c64" InformativeScreenshot="26bfa8c3db89f0fe5ae02835f9f601d2.png" Reference="4JygaK7e8U-yDkZNBLXO9g/GYMrYRgiCU-_rysB8Rr0Qg" ScopeSelectorArgument="&lt;html app='msedge.exe' url='https://finance.yahoo.com/markets/stocks*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                        </uix:NCheckState.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+              </ui:ForEach>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1528,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Logger.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                  <InArgument x:TypeArguments="x:String" x:Key="in_message">Data collection is complete</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1528,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Logger.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                  <InArgument x:TypeArguments="x:String" x:Key="in_message">["Number of rows after extraction: " + stocks_dt.RowCount().ToString()]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <Assign DisplayName="Assign - removing duplicates" sap:VirtualizedContainerService.HintSize="1528,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">[stocks_dt]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">[stocks_dt.AsEnumerable().GroupBy(Function(row) row(0).ToString).Select(Function(g) g.First()).CopyToDataTable()]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1528,170.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Logger.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+                  <InArgument x:TypeArguments="x:String" x:Key="in_message">["Number of rows after removing duplicates: " + stocks_dt.RowCount().ToString()]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-11, -11, 3862, 2122" BrowserType="Edge" ContentHash="8ETrNpp3oUmpO2VRP6h0ww" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEiSURBVDhPY0hgvPSfEjyEDGi3v/v/46vf/z+8+PU/heMyXJxoA85t+vgfBC5s+YgijmLAo0vf///5/e9/ttDV/2ncl////Pb3/+PL3/+Xqdz4//fvP7ABXS73cBuwsuwZWNHcpMf/p4Y9BLNXVz7/v3vSazAbZBiyehBGMaBQ5tr/f//+/b+47dP/02s+gDUVK1z//+bhz/9f3v35Pzv+EYpmEMYIg+v7P////esf2Pm3jn75X6V1E+yyAqlrKOpgGMOAucmPwTaDwOKcp/8fXvgGZh+c8xZFHQxjGJDJf+X/759////98+9/rtjV/2trnv9/de/n/wm+91HUwTCGAcXy18HhcGnHJxRxXBjDAFCogwC2AMOGMQwgFQ+0AZf+AwBp6nhKepyMaAAAAABJRU5ErkJggg==" InformativeScreenshot="0d32c400c76b5960d0d7bf7287d62296.jpg" Reference="dN7dNV7730O2NrmCMOaoeQ/QszqNpPrG0yAApVhvTkwtw" Selector="&lt;html app='msedge.exe' title='*yahoo*' /&gt;" Url="https://finance.yahoo.com/markets/stocks" Version="V1" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1596,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Logger.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_message">[$"Populating the '{queue_name_str}' Orchestrator Queue (in the '{queue_folder_str}' Folder)"]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="[queue_folder_str]" sap:VirtualizedContainerService.HintSize="1596,229.33333333333334" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[stocks_dt]" QueueName="[queue_name_str]" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logger - Invoke Workflow File (Logger.xaml)" sap:VirtualizedContainerService.HintSize="1596,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Logger.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_level" />
+          <InArgument x:TypeArguments="x:String" x:Key="in_message">--- Dispatcher execution ended ---</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_log_filename">[log_filename]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_output_folder_path_str">[in_output_folder_path_str]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+  </Sequence>
+</Activity>
