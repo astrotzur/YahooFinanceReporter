@@ -15,3 +15,9 @@ The solution leverages the RE-Framework for its robustness, including built-in e
 View full documentation in the main project folder
 
 YahooFinanceReporterREF\Data\YahooFinance_RPA_Solution_Documentation.docx
+
+---
+
+Examples of output can be found in:
+
+YahooFinanceReporterREF\Data\Output
